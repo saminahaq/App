@@ -1,0 +1,21 @@
+<html>
+
+<head>
+   <link href="/assets/style.css" rel = "stylesheet" type = "text/css" />
+</head>
+
+<body>
+    <% include partials/nav.ejs%>
+    <h1> Welcome to the <%= data.name %> and Co.</h1>
+    <p>Stock trading will start here</p>
+    <p><strong>Age: <%= data.age%></strong><br>
+        <strong>Job: <%= data.job%></strong></p>
+        <h2>Hobbies</h2>
+        <ul>
+            <% data.stocks.forEach(function(item){ %>
+                <li ><%= item %></li>
+           <% });%>
+        </ul>
+</body>
+
+</html>

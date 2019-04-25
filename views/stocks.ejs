@@ -1,0 +1,21 @@
+<html>
+
+<head>
+   <link href="/assets/style.css" rel = "stylesheet" type = "text/css" />
+</head>
+
+<body>
+    <% include partials/nav.ejs%>
+    <p> your stocks are as following</p>
+    <p>Stock trading will start here</p>
+    <p>Stocks list<%= qs.stocks %></p>
+
+        <h2>Stocks</h2>
+        <ul>
+            <% data.stocks.forEach(function(item){ %>
+                <li ><%= item %></li>
+           <% });%>
+        </ul>
+</body>
+
+</html>
